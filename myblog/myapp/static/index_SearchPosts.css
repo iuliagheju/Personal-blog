@@ -1,0 +1,24 @@
+#searchContainer {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust bottom margin as needed */
+}
+
+#searchInput {
+    margin-bottom: 10px; /* Space between input and button */
+    padding: 8px 15px; /* Padding inside the input box */
+    border: 2px solid #ccc; /* Border color and width */
+    border-radius: 4px; /* Rounded corners for the input box */
+}
+
+#searchButton {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#searchButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

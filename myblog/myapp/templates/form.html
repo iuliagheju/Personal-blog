@@ -1,0 +1,65 @@
+<form action="/submit" method="post" onsubmit="return validateForm()"></formaction>
+    <section class="container">
+        <section class="float-section">            
+            <link rel="stylesheet" type="text/css" href="../static/form.css">
+            <link rel="stylesheet" type="text/css" href="../static/menu.css">
+    <p>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'form' %}">Form</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    <label>Salutation
+    <select name="salutation">
+    <option>--None--</option>
+    <option>Mr.</option>
+    <option>Ms.</option>
+    <option>Mrs.</option>
+    <option>Dr.</option>
+    <option>Prof.</option>
+    
+    </select>
+    </label>
+    </p>
+    <p> <label>*First name: <input name="firstName" /></label></p>
+    <p><label>*Last name: <input name="lastName" /></label></p>
+    <label><input type="radio" name="gender" value="male" />Male</label>
+    <label><input type="radio" name="gender" value="female" />Female</label>
+    </p>
+    <p><label>*Email:<input type="email" name="email" /></label></p>
+    <p><label>Date of Birth:<input type="date" name="birthDate"></label></p>
+    <p><label>Phone:<input type="tel" name="phone" /></label></p>
+    <p><label>Country:<input name="country" /></label></p>
+    <p><label>City:<input name="city" /></label></p>
+    <p><label>Postal code:<input name="postalCode" /></label></p>
+    <p><label>Street:<input name="street" /></label></p>
+    <p><label>Number:<input name="number" /></label></p>
+    <p><label>Apartment:<input name="apartment" /></label></p>
+    <p><label>Building:<input name="building" /></label></p>
+    <p><label>Floor:<input name="floor" /></label></p>
+    <p><label>Door:<input name="door" /></label></p>
+    <p><label>Block:<input name="block" /></label></p>
+    <p><label>Staircase:<input name="staircase" /></label></p>
+    <p><label>Address: <textarea name="address" cols="30" rows="3"> </textarea>
+    </label></p>
+    <p><label>Message: <textarea name="message" cols="30" rows="10"> </textarea>
+    </label></p>
+    <p><label>Upload your CV: <input type="file" name="cv" /></label></p>
+    <p><label>Upload your photo: <input type="file" name="photo" /></label></p>
+    <p><label>Upload your ID: <input type="file" name="id" /></label></p>
+    <p><label>Upload your recommendation letter: <input type="file" name="recommendation" /></label></p>
+
+</section>
+</section>
+    <p><button type="submit">Submit</button></p>
+</form>
+<script src="form.js"></script>
+<footer>
+    <p>&copy; 2024 Iulia Gheju Blog. All rights reserved.</p>
+</footer>
+</section>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot</title>
+<link rel="stylesheet" type="text/css" href="../static/chatbot.css">
+<link rel="stylesheet" type="text/css" href="../static/menu.css">
+<script defer src="../static/menu.js"></script>
+<script defer src="../static/chatbot.js"></script>
+
+</head>
+
+<nav>
+    <div class="hamburger" id="hamburger-icon">&#9776;</div>
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'form' %}">Form</a></li>
+        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+<body>
+<div class="chat-container" id="chat-container">
+
+</div>
+
+<form id="chat-form" onsubmit="event.preventDefault(); sendMessage();">
+  <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+  <button type="submit">Send</button>
+</form>
+
+<script src="chatbot.js"></script>
+<footer>
+    <p>&copy; 2024 Iulia Gheju Blog. All rights reserved.</p>
+</footer>
+</body>
+</html>

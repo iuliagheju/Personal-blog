@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="../static/gallery.css">
+    <link rel="stylesheet" type="text/css" href="../static/menu.css">
+    <script defer src="../static/gallery.js"></script>
+</head>
+<section class="box">     
+<h1>Gallery</h1>
+</section>
+<body>
+<div class="slider">
+    <div class="slides">
+        <img src="../static/london.jpg" alt="A scenic view of London with the iconic London Eye visible">
+        <img src="../static/london2.jpg" alt="Night view of Tower Bridge in London, beautifully lit up">
+        <img src="../static/prague.jpg" alt="The historic Charles Bridge over the Vltava River in Prague">
+        <img src="../static/colloseum.jpg" alt="The ancient Colosseum in Rome, a glimpse into Roman architectural prowess">
+        <img src="../static/strasbourg.jpg" alt="Strasbourg's picturesque 'La Petite France' neighborhood">
+        <img src="../static/vienna.jpg" alt="Vienna cityscape showcasing the grandeur of Austrian architecture">
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>    
+    <div class="sidebar">
+        <ul class="nav-menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'form' %}">Form</a></li>
+            <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>    
+</div>
+<footer>
+    <p>&copy; 2024 Iulia Gheju Blog. All rights reserved.</p>
+</footer>
+
+</body>
+
+
+</html>

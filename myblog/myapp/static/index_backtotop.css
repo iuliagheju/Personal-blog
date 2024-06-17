@@ -1,0 +1,18 @@
+#scrollToTopBtn {
+    position: fixed; /* Keeps the button fixed during scrolling */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    padding: 10px 20px; /* Padding for button size */
+    background-color: #007BFF; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: none; /* Hide by default, shown by JavaScript */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+  

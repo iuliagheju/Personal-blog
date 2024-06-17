@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/menu.css">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+    <script defer src="../static/menu.js"></script>
+    <script defer src="../static/scrollToTopBtn.js"></script>
+    <script defer src="../static/index_SearchPosts.js"></script>
+
+    <title>Welcome to Iulia Gheju - Blog</title>
+</head>
+<body class = "menu">
+    <img src="../static/vangogh.jpg" alt="Van Gogh painting" class="top-left-image">
+    <header>
+        <h1>Iulia Gheju Blog</h1>
+    </header>
+
+
+    <nav>
+        <div class="hamburger" id="hamburger-icon">&#9776;</div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'form' %}">Form</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'chatbot' %}">Chatbot</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="box">     
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" onclick="searchPosts()">Search</button>
+            </div>
+<div class = "blog posts">
+</div>
+
+<section class="float">
+    <section id="article-section">
+        {% block content %}
+        {% for post in posts %}
+        <article>
+            <h2 class="h2"><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+            <p id="paragraph">Posted on {{ post.post_date }}</p>
+            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            <p>{{ post.paragraph }}</p>
+        </article>
+        {% endfor %}
+        {% endblock %}
+    </section>
+</section>
+
+           
+    <section class="sidebar">
+        <aside>
+            <h2>Sidebar</h2>
+            <h2>Recent Posts</h2>
+        <ul>
+            <li>Discovering the Beauty of Abstract Art</li>
+            <li>The Timeless Appeal of Classic Literature</li>
+            <li>Embracing the Joy of Solo Travel</li>
+            <li>The Therapeutic Power of Creating Art</li>
+            
+        </ul>
+       
+    </section>
+     </aside>
+     <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Back to Top </button>
+     
+    <footer>
+        <p>&copy; 2024 Iulia Gheju Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

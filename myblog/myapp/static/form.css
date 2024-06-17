@@ -1,0 +1,84 @@
+@media screen and (min-width: 1024px) {
+    .container {
+    width: 960px;
+    margin: 0 auto;
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+        width: 100%;
+        padding: 0 20px;
+        }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+            width: 100%;
+            padding: 0 10px;
+            }
+            }
+
+    @keyframes entryAnimation {
+                0% { opacity: 1; }
+               50% { opacity: 0.5; }
+               100% { opacity: 1; }
+            
+            }         
+.container p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: hotpink;
+    font-weight: bold; 
+    transition: color 0.3s ease;
+    animation: entryAnimation 2s infinite ease-in-out;
+}
+
+@keyframes fadeAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+    }
+.container label {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: hotpink;
+    transition: color 0.3s ease;
+    font-weight: bold; 
+    animation: fadeAnimation 2s infinite ease-in-out;
+}
+
+.float-left {
+    float: left;
+    width: 50%;
+}
+
+.float-right {
+    float: right;
+    width: 50%;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+a:hover {
+    color: rgb(238, 139, 221);
+
+}
+
+a:visited {
+    color: rgb(190, 78, 190);
+}
+footer {
+    background-color: #FFF0F5;
+    color: #FF69B4;
+    padding: 10px;
+    text-align: center;
+    animation: fadeAnimation 2s infinite alternate;
+}
