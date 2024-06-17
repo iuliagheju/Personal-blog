@@ -44,9 +44,10 @@
         {% for post in posts %}
         <article>
             <h2 class="h2"><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
-            <p id="paragraph">Posted on {{ post.post_date }}</p>
+            <p id="postDate">Posted on {{ post.post_date }}</p>
             <img src="{{ post.image.url }}" alt="{{ post.title }}">
             <p>{{ post.paragraph }}</p>
+            <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
         </article>
         {% endfor %}
         {% endblock %}
